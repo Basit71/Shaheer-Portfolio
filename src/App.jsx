@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from './pages/Navbar'
-import Home from './pages/Home'
-import About from './pages/About'
-import Skill from './pages/skill'
-import Project from './pages/Project'
-import Footer from './pages/Footer'
+import Navbar from './pages/Navbar.jsx'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
+import Skill from './pages/skill.jsx'
+import Project from './pages/Project.jsx'
+import Footer from './pages/Footer.jsx'
 
 
 function App() {
