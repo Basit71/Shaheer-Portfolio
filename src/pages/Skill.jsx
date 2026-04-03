@@ -7,7 +7,7 @@ import { MdApi } from "react-icons/md";
 
 const skills = [
   {
-    name: "FLAUTTER",
+    name: "FLUTTER",
     icon: <SiFlutter />,
     color: "text-blue-500",
   },
