@@ -2,18 +2,18 @@ import React from "react";
 import { DiMysql } from "react-icons/di";
 import { BiLogoPlayStore } from "react-icons/bi";
 import { FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { SiMongodb, SiFlutter, SiDotnet, SiFirebase } from "react-icons/si";
+import { SiFlutter, SiDart, SiFirebase } from "react-icons/si";
 import { MdApi } from "react-icons/md";
 
 const skills = [
   {
     name: "FLAUTTER",
     icon: <SiFlutter />,
-    color: "text-orange-500",
+    color: "text-blue-500",
   },
   {
     name: "Dart",
-    icon: <SiDotnet />,
+    icon: <SiDart />,
     color: "text-blue-500",
   },
   {
@@ -27,9 +27,9 @@ const skills = [
     color: "text-green-500",
   },
   {
-    name: "MongoDB",
-    icon: <SiMongodb />,
-    color: "text-green-600",
+    name: "FIRE STORE",
+     icon: <SiFirebase />,
+    color: "text-yellow-400",
   },
   {
     name: "My SQL",

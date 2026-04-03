@@ -13,8 +13,7 @@ function Home() {
             Flutter Developer & AI Enthusiast
           </h1>
           <p className=" md:text-xl  ">
-            Designing and developing high-quality Flutter apps with robust
-            Python backends and AI-driven innovation, I focus on delivering
+            Designing and developing high-quality Flutter apps with Firebase backends and AI-driven innovation, I focus on delivering
             seamless digital experiences that are both visually engaging and
             highly performant.
           </p>
