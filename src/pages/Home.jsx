@@ -10,7 +10,7 @@ function Home() {
         {/* Text Section */}
         <div className="md:w-1/2">
           <h1 className="text-7xl font-bold mb-4 text-blue-500 ">
-            Flatter Developer & AI Enthusiast
+            Flutter Developer & AI Enthusiast
           </h1>
           <p className=" md:text-xl  ">
             Designing and developing high-quality Flutter apps with robust

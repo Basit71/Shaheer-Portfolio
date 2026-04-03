@@ -3,6 +3,7 @@ import { DiMysql } from "react-icons/di";
 import { BiLogoPlayStore } from "react-icons/bi";
 import { FaNodeJs, FaGitAlt } from "react-icons/fa";
 import { SiMongodb, SiFlutter, SiDotnet, SiFirebase } from "react-icons/si";
+import { MdApi } from "react-icons/md";
 
 const skills = [
   {
@@ -11,7 +12,7 @@ const skills = [
     color: "text-orange-500",
   },
   {
-    name: "DOT",
+    name: "Dart",
     icon: <SiDotnet />,
     color: "text-blue-500",
   },
@@ -43,6 +44,7 @@ const skills = [
   },
   {
     name: "API INTEGRATION",
+    icon: <MdApi />,
     color: "text-red-500",
   },
   {
