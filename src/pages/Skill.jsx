@@ -1,29 +1,23 @@
 import React from "react";
 import { DiMysql } from "react-icons/di";
 import { BiLogoPlayStore } from "react-icons/bi";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaNodeJs,
-  FaGitAlt,
-} from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
+import { FaNodeJs, FaGitAlt } from "react-icons/fa";
+import { SiMongodb, SiFlutter, SiDotnet, SiFirebase } from "react-icons/si";
 
 const skills = [
   {
-    name: "HTML",
-    icon: <FaHtml5 />,
+    name: "FLAUTTER",
+    icon: <SiFlutter />,
     color: "text-orange-500",
   },
   {
-    name: "CSS",
-    icon: <FaCss3Alt />,
+    name: "DOT",
+    icon: <SiDotnet />,
     color: "text-blue-500",
   },
   {
-    name: "JavaScript",
-    icon: <FaJs />,
+    name: "FIREBASE",
+    icon: <SiFirebase />,
     color: "text-yellow-400",
   },
   {
@@ -37,10 +31,9 @@ const skills = [
     color: "text-green-600",
   },
   {
-       name: "My SQL",
+    name: "My SQL",
     icon: <DiMysql />,
     color: "text-green-600",
-
   },
 
   {
@@ -51,24 +44,19 @@ const skills = [
   {
     name: "API INTEGRATION",
     color: "text-red-500",
-
   },
   {
-   name: "PLAY STORE",
+    name: "PLAY STORE",
     icon: <BiLogoPlayStore />,
     color: "text-red-500",
-
   },
-
 ];
 
 const Skill = () => {
   return (
     <section className="py-12 bg-white text-black" id="skills">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-10">
-          My Skills
-        </h2>
+        <h2 className="text-3xl font-bold text-center mb-10">My Skills</h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
@@ -76,9 +64,7 @@ const Skill = () => {
               key={index}
               className="bg-white p-6 rounded-2xl flex flex-col items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300"
             >
-              <div className={`text-4xl mb-3 ${skill.color}`}>
-                {skill.icon}
-              </div>
+              <div className={`text-4xl mb-3 ${skill.color}`}>{skill.icon}</div>
               <p className="text-lg font-medium">{skill.name}</p>
             </div>
           ))}
@@ -89,4 +75,3 @@ const Skill = () => {
 };
 
 export default Skill;
-
