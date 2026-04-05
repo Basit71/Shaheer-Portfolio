@@ -5,24 +5,30 @@ import About from "./pages/About.jsx";
 import Skill from "./pages/Skill.jsx";
 import Project from "./pages/Project.jsx";
 import Contact from "./pages/Contact.jsx";
-import footer from "./pages/Footer.jsx";
-
-import { Routes, Route } from "react-router-dom";
+import Footer from "./pages/Footer.jsx";
 
 function App() {
   return (
     <>
       <Navbar />
       <main className="pt-20">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/skills" element={<Skill />} />
-          <Route path="/projects" element={<Project />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <section id="home">
+          <Home />
+        </section>
+        <section id="skills">
+          <Skill />
+        </section>
+        <section id="projects">
+          <Project />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
-      <footer />
+      <Footer />
     </>
   );
 }

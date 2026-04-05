@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { name: "Home", to: "/" },
-    { name: "About Me", to: "/about" },
-    { name: "Skills", to: "/skills" },
-    { name: "Projects", to: "/projects" },
-    { name: "Contact", to: "/contact" }, // only if you create this route
-  ];
+  // Update links to point to separate HTML pages
+ const navLinks = [
+  { name: "Home", href: "#home" },
+  { name: "About Me", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
 
   return (
-  <nav className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
         {/* Logo */}
@@ -26,12 +26,12 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-8 text-sm font-medium">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <Link
-                to={link.to}
+              <a
+                href={link.href}
                 className="hover:text-blue-500 transition-colors duration-200"
               >
                 {link.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -50,13 +50,13 @@ export default function Navbar() {
           <ul className="flex flex-col items-center gap-6 py-6 text-sm font-medium">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <Link
-                  to={link.to}
+                <a
+                  href={link.href}
                   onClick={() => setIsOpen(false)}
                   className="hover:text-blue-500 transition-colors duration-200"
                 >
                   {link.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
