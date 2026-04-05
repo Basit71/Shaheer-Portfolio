@@ -1,34 +1,37 @@
-import React from 'react'
-import { useState } from "react";
+import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About Me", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", to: "/" },
+    { name: "About Me", to: "/about" },
+    { name: "Skills", to: "/skills" },
+    { name: "Projects", to: "/projects" },
+    { name: "Contact", to: "/contact" }, // only if you create this route
   ];
 
   return (
-    <nav className="fixed w-full top-0 left-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+  <nav className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        
         {/* Logo */}
-        <h1 className="text-xl font-bold tracking-wide text-blue-500">Muhammad Shaheer Ali</h1>
+        <h1 className="text-xl font-bold tracking-wide text-blue-500">
+          Muhammad Shaheer Ali
+        </h1>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-sm font-medium">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <a
-                href={link.href}
+              <Link
+                to={link.to}
                 className="hover:text-blue-500 transition-colors duration-200"
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -47,13 +50,13 @@ export default function Navbar() {
           <ul className="flex flex-col items-center gap-6 py-6 text-sm font-medium">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.href}
+                <Link
+                  to={link.to}
                   onClick={() => setIsOpen(false)}
                   className="hover:text-blue-500 transition-colors duration-200"
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -62,5 +65,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
